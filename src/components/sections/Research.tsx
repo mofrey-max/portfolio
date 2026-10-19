@@ -47,7 +47,7 @@ export function Research() {
         <div className="section-header-immersive reveal-section">
           <span className="section-badge">04 — Research</span>
           <h2 id="research-heading">Academic Contributions: Two Peer-Reviewed Papers, 2026</h2>
-          <p>Peer-reviewed AI research. Postgraduate researcher at MAU, Yola.</p>
+          <p>Peer-reviewed AI research. MSc Computer Science (In View), Artificial Intelligence, MAU Yola.</p>
         </div>
 
         <div className="grid-immersive reveal-stagger">
