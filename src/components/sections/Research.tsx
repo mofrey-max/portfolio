@@ -7,7 +7,7 @@ const papers = [
     title: 'Explainability Fatigue in Artificial Intelligence',
     authors: 'Manunyi Godfrey & Dahiru Haruna Usman',
     summary:
-      'Introduces "explainability fatigue" — the point where high-volume XAI explanations overwhelm users, drive disengagement, and erode trust. Makes the case for context-aware, cognitively sustainable transparency.',
+      'Introduces "explainability fatigue": the point where high-volume XAI explanations overwhelm users, drive disengagement, and erode trust. Makes the case for context-aware, cognitively sustainable transparency.',
     tags: ['Explainable AI (XAI)', 'Cognitive Load', 'Human-Computer Interaction'],
   },
   {
@@ -16,7 +16,7 @@ const papers = [
     title: 'A Formal Ontology Evaluation Methodology for Education-Domain Knowledge Graphs',
     authors: 'Manunyi Godfrey, Shaphat Safethon & Kayode Oladipupo Oluborode',
     summary:
-      'A formal methodology for structurally validating and evaluating the ontologies behind education-domain knowledge graphs — measurable quality for semantic data in learning systems.',
+      'A formal methodology for structurally validating and evaluating the ontologies behind education-domain knowledge graphs: measurable quality for semantic data in learning systems.',
     tags: ['Knowledge Graphs', 'Ontology Evaluation', 'Knowledge Engineering'],
   },
 ]
@@ -46,7 +46,7 @@ export function Research() {
       <div className="max-w-6xl mx-auto">
         <div className="section-header-immersive reveal-section">
           <span className="section-badge">04 — Research</span>
-          <h2 id="research-heading">Academic Contributions — Two Peer-Reviewed Papers, 2026</h2>
+          <h2 id="research-heading">Academic Contributions: Two Peer-Reviewed Papers, 2026</h2>
           <p>Peer-reviewed AI research. Postgraduate researcher at MAU, Yola.</p>
         </div>
 
