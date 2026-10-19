@@ -38,12 +38,40 @@ export function Proof() {
           <p>Specific results. Real testimonials. Open source.</p>
         </div>
 
-        {/* GitHub Stats — auto-fit grid with immersive stat cards */}
+        {/* GitHub Stats — real metrics from github.com/mofrey-max */}
         <div className="grid-immersive-wide reveal-stagger mb-10 sm:mb-12">
-          <StatCard value="2.3k+" label="Total Stars" />
-          <StatCard value="47" label="Public Repos" />
-          <StatCard value="12" label="50+ Star Repos" />
-          <StatCard value="Py · TS · Rust" label="Top Languages" />
+          <StatCard value="88" label="Public Repos" />
+          <StatCard value="23" label="Own Projects" />
+          <StatCard value="11" label="Total Stars" />
+          <StatCard value="TS · JS · Py" label="Top Languages" />
+        </div>
+
+        {/* Real profile highlights */}
+        <div className="grid-immersive-narrow reveal-stagger mb-10 sm:mb-12">
+          <HighlightPill icon="🏆" text="Arctic Code Vault Contributor" />
+          <HighlightPill icon="🍴" text="15 Forks Received" />
+          <HighlightPill icon="👥" text="7 Followers" />
+          <HighlightPill icon="📅" text="On GitHub Since 2019" />
+        </div>
+
+        {/* Top repository */}
+        <div className="card-immersive reveal-section mb-10 sm:mb-12">
+          <div className="flex items-start justify-between gap-3 flex-wrap">
+            <div className="min-w-0">
+              <div className="flex items-center gap-2 mb-1">
+                <Github className="w-4 h-4 text-text-muted flex-shrink-0" aria-hidden="true" />
+                <strong className="text-text text-sm sm:text-base">token-metadata-program</strong>
+                <span className="stack-pill">TypeScript</span>
+              </div>
+              <p className="text-xs sm:text-sm text-text-muted">
+                Solana SPL Metadata program to update token metadata credentials
+              </p>
+            </div>
+            <div className="flex items-center gap-3 text-xs text-text-muted flex-shrink-0">
+              <span>★ 7</span>
+              <span>⑂ 13</span>
+            </div>
+          </div>
         </div>
 
         {/* Testimonials */}
@@ -134,6 +162,15 @@ function StatCard({ value, label }: { value: string; label: string }) {
         {value}
       </div>
       <div className="stat-immersive-label">{label}</div>
+    </div>
+  )
+}
+
+function HighlightPill({ icon, text }: { icon: string; text: string }) {
+  return (
+    <div className="card-immersive flex items-center gap-2 py-3">
+      <span className="text-lg flex-shrink-0" aria-hidden="true">{icon}</span>
+      <span className="text-xs sm:text-sm text-text font-medium">{text}</span>
     </div>
   )
 }
