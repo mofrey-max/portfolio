@@ -222,18 +222,22 @@ function ProjectCard({ project, isExpanded, onToggle }: { project: typeof projec
           maxHeight="300px"
         />
 
-        <div className="flex gap-2 pt-2">
-          <Button variant="ghost" size="sm" onClick={() => window.open(project.links.github, '_blank', 'noopener,noreferrer')}>
-            <Github className="w-4 h-4 flex-shrink-0" aria-hidden="true" />
-            Code
-          </Button>
-          {project.links.demo !== '#' && (
-            <Button variant="ghost" size="sm" onClick={() => window.open(project.links.demo, '_blank', 'noopener,noreferrer')}>
-              <ExternalLink className="w-4 h-4 flex-shrink-0" aria-hidden="true" />
-              Demo
-            </Button>
-          )}
-        </div>
+        {(project.links.github !== '#' || project.links.demo !== '#') && (
+          <div className="flex gap-2 pt-2">
+            {project.links.github !== '#' && (
+              <Button variant="ghost" size="sm" onClick={() => window.open(project.links.github, '_blank', 'noopener,noreferrer')}>
+                <Github className="w-4 h-4 flex-shrink-0" aria-hidden="true" />
+                Code
+              </Button>
+            )}
+            {project.links.demo !== '#' && (
+              <Button variant="ghost" size="sm" onClick={() => window.open(project.links.demo, '_blank', 'noopener,noreferrer')}>
+                <ExternalLink className="w-4 h-4 flex-shrink-0" aria-hidden="true" />
+                Demo
+              </Button>
+            )}
+          </div>
+        )}
       </div>
     </div>
   )

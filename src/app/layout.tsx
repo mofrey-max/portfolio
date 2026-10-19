@@ -31,7 +31,6 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://manunyi.dev',
     title: 'Manunyi Godfrey — AI Engineer | LLM/RAG/Agents | Production Systems',
     description: 'I turn LLM prototypes that work in notebooks into features that work in production — evals, observability, and all.',
     siteName: 'Manunyi Godfrey — AI Engineer Portfolio',

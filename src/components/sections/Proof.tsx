@@ -109,9 +109,9 @@ export function Proof() {
                 </div>
                 <div className="flex flex-wrap gap-1.5 mb-2">
                   {oss.prs.map((pr) => (
-                    <a key={pr} href="#" className="text-xs text-primary hover:underline" target="_blank" rel="noopener noreferrer">
+                    <span key={pr} className="text-xs text-text-muted font-mono">
                       PR {pr}
-                    </a>
+                    </span>
                   ))}
                 </div>
                 <p className="text-xs text-text-muted">{oss.area}</p>
@@ -126,15 +126,23 @@ export function Proof() {
             <h3 className="text-lg sm:text-xl font-semibold mb-0">Writing & Speaking</h3>
           </div>
           <div className="grid-immersive-narrow reveal-stagger">
-            {writing.map((w, i) => (
-              <a key={i} href={w.url} className="card-immersive block text-left" target="_blank" rel="noopener noreferrer">
-                <p className="text-text font-medium text-sm sm:text-base mb-1">{w.title}</p>
-                <p className="text-xs text-text-muted flex items-center gap-1">
-                  <ExternalLink className="w-3 h-3 flex-shrink-0" aria-hidden="true" />
-                  {w.metric}
-                </p>
-              </a>
-            ))}
+            {writing.map((w, i) => {
+              const isLink = w.url !== '#'
+              const Wrapper = isLink ? 'a' : 'div'
+              return (
+                <Wrapper
+                  key={i}
+                  {...(isLink ? { href: w.url, target: '_blank', rel: 'noopener noreferrer' } : {})}
+                  className="card-immersive block text-left"
+                >
+                  <p className="text-text font-medium text-sm sm:text-base mb-1">{w.title}</p>
+                  <p className="text-xs text-text-muted flex items-center gap-1">
+                    {isLink && <ExternalLink className="w-3 h-3 flex-shrink-0" aria-hidden="true" />}
+                    {w.metric}
+                  </p>
+                </Wrapper>
+              )
+            })}
           </div>
         </div>
 
