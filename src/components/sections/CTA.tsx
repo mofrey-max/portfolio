@@ -3,9 +3,17 @@
 import { useToast } from '@/components/ui/Toast'
 import { Download, Mail, Github, Linkedin } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
+import { copyEmailToClipboard, openMailClient } from '@/lib/email'
 
 export function CTA() {
   const { toast } = useToast()
+
+  const handleEmailClick = (e: React.MouseEvent) => {
+    e.preventDefault()
+    toast({ type: 'info', message: 'Opening your email app…' })
+    copyEmailToClipboard()
+    openMailClient()
+  }
 
   return (
     <section
@@ -40,6 +48,7 @@ export function CTA() {
             label="Email"
             value="Send Email"
             href="mailto:manugodfrey855@gmail.com"
+            onClick={handleEmailClick}
             ariaLabel="Send email"
           />
           <ContactLink
@@ -88,7 +97,7 @@ function ContactLink({
   icon: React.ReactNode
   label: string
   value: string
-  onClick?: () => void
+  onClick?: (e: React.MouseEvent) => void
   href?: string
   external?: boolean
   ariaLabel?: string
@@ -107,6 +116,7 @@ function ContactLink({
         href={href}
         target={external ? '_blank' : undefined}
         rel={external ? 'noopener noreferrer' : undefined}
+        onClick={onClick}
         className="group"
         aria-label={ariaLabel || `${label}: ${value}`}
       >

@@ -1,8 +1,19 @@
 'use client'
 
 import { Github, Linkedin, Mail } from 'lucide-react'
+import { useToast } from '@/components/ui/Toast'
+import { copyEmailToClipboard, openMailClient } from '@/lib/email'
 
 export function Footer() {
+  const { toast } = useToast()
+
+  const handleEmailClick = (e: React.MouseEvent) => {
+    e.preventDefault()
+    toast({ type: 'info', message: 'Opening your email app…' })
+    copyEmailToClipboard()
+    openMailClient()
+  }
+
   return (
     <footer className="border-t border-border py-6 md:py-8" role="contentinfo">
       <div className="container flex flex-col items-center gap-5">
@@ -19,6 +30,7 @@ export function Footer() {
           </a>
           <a
             href="mailto:manugodfrey855@gmail.com"
+            onClick={handleEmailClick}
             className="hover:text-primary transition-colors flex items-center gap-1.5"
           >
             <Mail className="w-4 h-4 flex-shrink-0" aria-hidden="true" />

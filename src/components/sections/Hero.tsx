@@ -3,6 +3,8 @@
 import { useEffect, useState } from 'react'
 import { ArrowRight, Download, Github, Mail } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
+import { useToast } from '@/components/ui/Toast'
+import { copyEmailToClipboard, openMailClient } from '@/lib/email'
 import { GapVisualization } from './GapVisualization'
 import { HeroSlider } from './HeroSlider'
 
@@ -31,6 +33,14 @@ const statements = [
 
 export default function Hero() {
   const [active, setActive] = useState(0)
+  const { toast } = useToast()
+
+  const handleEmailClick = (e: React.MouseEvent) => {
+    e.preventDefault()
+    toast({ type: 'info', message: 'Opening your email app…' })
+    copyEmailToClipboard()
+    openMailClient()
+  }
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -113,6 +123,7 @@ export default function Hero() {
           <span className="hidden sm:inline" aria-hidden="true">·</span>
           <a
             href="mailto:manugodfrey855@gmail.com"
+            onClick={handleEmailClick}
             className="flex items-center gap-1.5 hover:text-primary transition-colors"
           >
             <Mail className="w-4 h-4 flex-shrink-0" aria-hidden="true" />
