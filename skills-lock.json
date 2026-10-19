@@ -1,6 +1,12 @@
 {
   "version": 1,
   "skills": {
+    "pdf-word-reader-zh": {
+      "source": "20041002liu-cloud/pdf-word-reader-zh",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "300617d90bb42026bb5ce213920d619c428a9d2f62eff45270e70fbe3219ad99"
+    },
     "tailwindcss-advanced-layouts": {
       "source": "josiahsiegel/claude-plugin-marketplace",
       "sourceType": "github",

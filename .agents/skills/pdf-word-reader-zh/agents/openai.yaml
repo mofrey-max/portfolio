@@ -1,0 +1,4 @@
+interface:
+  display_name: "PDF Word Reader ZH"
+  short_description: "Read PDF/DOCX/PPTX with OCR and evidence chunks."
+  default_prompt: "Use $pdf-word-reader-zh to fully analyze this PDF, DOCX, or PPTX and return evidence-cited conclusions."
