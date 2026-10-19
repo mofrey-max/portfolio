@@ -117,12 +117,10 @@ export function Navigation() {
           <div className="hidden md:flex items-center gap-3">
             <ThemeToggle />
             <a
-              href="#contact"
+              href="/Manunyi-Godfrey-CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-primary text-sm px-4 py-2 rounded-md font-medium"
-              onClick={(e) => {
-                e.preventDefault()
-                scrollTo('#contact')
-              }}
             >
               Resume
             </a>
@@ -186,12 +184,10 @@ export function Navigation() {
             {/* Bottom CTA */}
             <div className="p-4 border-t border-border" style={{ paddingBottom: 'calc(1rem + env(safe-area-inset-bottom))' }}>
               <a
-                href="#contact"
+                href="/Manunyi-Godfrey-CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-primary w-full text-center py-3"
-                onClick={(e) => {
-                  e.preventDefault()
-                  scrollTo('#contact')
-                }}
               >
                 Resume
               </a>

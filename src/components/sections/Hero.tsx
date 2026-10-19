@@ -101,7 +101,7 @@ export default function Hero() {
 
         {/* CTA — Resume only */}
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center md:justify-start gap-3 sm:gap-4 mb-8">
-          <Button size="lg" className="w-full sm:w-auto group">
+          <Button size="lg" className="w-full sm:w-auto group" onClick={() => window.open('/Manunyi-Godfrey-CV.pdf', '_blank', 'noopener,noreferrer')}>
             <Download className="w-5 h-5 flex-shrink-0" aria-hidden="true" />
             <span className="truncate">Resume</span>
             <ArrowRight className="w-5 h-5 flex-shrink-0 transition-transform group-hover:translate-x-1" aria-hidden="true" />

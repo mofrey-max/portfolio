@@ -35,7 +35,7 @@ export function CTA() {
 
         {/* Primary CTA */}
         <div className="mb-8 reveal-section">
-          <Button size="lg" className="w-full sm:w-auto group">
+          <Button size="lg" className="w-full sm:w-auto group" onClick={() => window.open('/Manunyi-Godfrey-CV.pdf', '_blank', 'noopener,noreferrer')}>
             <Download className="w-5 h-5 flex-shrink-0 transition-transform group-hover:translate-y-0.5" aria-hidden="true" />
             <span className="truncate">Download Resume & Contact Me</span>
           </Button>
