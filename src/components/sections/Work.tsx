@@ -133,7 +133,7 @@ export function Work() {
         <div className="section-header-immersive reveal-section">
           <span className="section-badge">02 — Work</span>
           <h2 id="work-heading">
-            Selected Work — Shipped Systems, Measured Results
+            Selected Work: Shipped Systems, Measured Results
           </h2>
           <p>Deep-dives with architecture, metrics, and code.</p>
         </div>

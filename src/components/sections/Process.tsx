@@ -46,7 +46,7 @@ export function Process() {
         <div className="section-header-immersive reveal-section">
           <span className="section-badge">03 — Process</span>
           <h2 id="process-heading">
-            How I Work — Eval-First, Observability-from-Day-One
+            How I Work: Eval-First, Observability from Day One
           </h2>
           <p>Three steps. No handoffs. Production from day one.</p>
         </div>

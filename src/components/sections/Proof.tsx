@@ -34,7 +34,7 @@ export function Proof() {
       <div className="max-w-6xl mx-auto">
         <div className="section-header-immersive reveal-section">
           <span className="section-badge">05 — Proof</span>
-          <h2 id="proof-heading">Proof — Code, Metrics, References</h2>
+          <h2 id="proof-heading">Proof: Code, Metrics, References</h2>
           <p>Specific results. Real testimonials. Open source.</p>
         </div>
 
