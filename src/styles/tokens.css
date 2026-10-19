@@ -1,0 +1,182 @@
+/* Design Tokens — CSS Custom Properties
+   Single source of truth for colors, shadows, spacing, etc.
+   Light mode defaults, dark mode via [data-theme="dark"] or prefers-color-scheme
+*/
+
+:root {
+  /* Light mode (default) */
+  --bg: #fafafa;
+  --bg-elevated: #ffffff;
+  --border: #e5e5e5;
+  --border-strong: #d4d4d4;
+  --text: #171717;
+  --text-strong: #000000;
+  --text-muted: #737373;
+  --primary: #0066cc;
+  --primary-strong: #0052a3;
+  --primary-bg: #eff6ff;
+  --success: #059669;
+  --success-bg: #ecfdf5;
+  --warning: #d97706;
+  --warning-bg: #fffbeb;
+  --error: #dc2626;
+  --error-bg: #fef2f2;
+  --focus: #0066cc;
+
+  /* Shadows (light mode) */
+  --shadow-0: none;
+  --shadow-1: 0 1px 2px rgb(0 0 0 / 0.05);
+  --shadow-2: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --shadow-3: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  --shadow-4: 0 25px 50px -12px rgb(0 0 0 / 0.15);
+}
+
+/* Dark mode via data-theme attribute (toggled by ThemeProvider) */
+[data-theme="dark"] {
+  --bg: #0a0a0a;
+  --bg-elevated: #181818;
+  --border: #2a2a2a;
+  --border-strong: #3f3f3f;
+  --text: #ededed;
+  --text-strong: #ffffff;
+  --text-muted: #a3a3a3;
+  --primary: #60a5fa;
+  --primary-strong: #93c5fd;
+  --primary-bg: #1e3a5f;
+  --success: #34d399;
+  --success-bg: #064e3b;
+  --warning: #fbbf24;
+  --warning-bg: #78350f;
+  --error: #f87171;
+  --error-bg: #7f1d1d;
+  --focus: #60a5fa;
+
+  /* Shadows (dark mode — higher opacity for visibility) */
+  --shadow-0: none;
+  --shadow-1: 0 1px 2px rgb(0 0 0 / 0.3);
+  --shadow-2: 0 4px 6px -1px rgb(0 0 0 / 0.4);
+  --shadow-3: 0 10px 15px -3px rgb(0 0 0 / 0.5);
+  --shadow-4: 0 25px 50px -12px rgb(0 0 0 / 0.6);
+}
+
+/* Forced light mode */
+[data-theme="light"] {
+  --bg: #fafafa;
+  --bg-elevated: #ffffff;
+  --border: #e5e5e5;
+  --border-strong: #d4d4d4;
+  --text: #171717;
+  --text-strong: #000000;
+  --text-muted: #737373;
+  --primary: #0066cc;
+  --primary-strong: #0052a3;
+  --primary-bg: #eff6ff;
+  --success: #059669;
+  --success-bg: #ecfdf5;
+  --warning: #d97706;
+  --warning-bg: #fffbeb;
+  --error: #dc2626;
+  --error-bg: #fef2f2;
+  --focus: #0066cc;
+
+  --shadow-0: none;
+  --shadow-1: 0 1px 2px rgb(0 0 0 / 0.05);
+  --shadow-2: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --shadow-3: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  --shadow-4: 0 25px 50px -12px rgb(0 0 0 / 0.15);
+}
+
+/* System preference fallback (when no data-theme set) */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0a0a0a;
+    --bg-elevated: #181818;
+    --border: #2a2a2a;
+    --border-strong: #3f3f3f;
+    --text: #ededed;
+    --text-strong: #ffffff;
+    --text-muted: #a3a3a3;
+    --primary: #60a5fa;
+    --primary-strong: #93c5fd;
+    --primary-bg: #1e3a5f;
+    --success: #34d399;
+    --success-bg: #064e3b;
+    --warning: #fbbf24;
+    --warning-bg: #78350f;
+    --error: #f87171;
+    --error-bg: #7f1d1d;
+    --focus: #60a5fa;
+
+    --shadow-0: none;
+    --shadow-1: 0 1px 2px rgb(0 0 0 / 0.3);
+    --shadow-2: 0 4px 6px -1px rgb(0 0 0 / 0.4);
+    --shadow-3: 0 10px 15px -3px rgb(0 0 0 / 0.5);
+    --shadow-4: 0 25px 50px -12px rgb(0 0 0 / 0.6);
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Focus visible — accessible focus rings */
+:focus-visible {
+  outline: none;
+  ring: 3px solid var(--focus);
+  ring-offset: 2px;
+  ring-offset-background: var(--bg);
+}
+
+/* Selection colors */
+::selection {
+  background: var(--primary-bg);
+  color: var(--primary);
+}
+
+[data-theme="dark"] ::selection {
+  background: var(--primary-bg);
+  color: var(--primary-strong);
+}
+
+/* Scrollbar styling (subtle) */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: white !important;
+    color: black !important;
+  }
+}

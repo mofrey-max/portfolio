@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1200, height=630">
+  <title>OG Image Generator</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1200px;
+      height: 630px;
+      background: #0a0a0a;
+      color: #ededed;
+      font-family: 'Geist', system-ui, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    .bg-pattern {
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle at 20% 20%, rgba(96, 165, 250, 0.08) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(52, 211, 153, 0.08) 0%, transparent 50%);
+    }
+    .content { position: relative; z-index: 1; text-align: center; max-width: 800px; }
+    h1 {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      margin-bottom: 24px;
+    }
+    .highlight { color: #60a5fa; }
+    p { font-size: 22px; color: #a3a3a3; line-height: 1.5; margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto; }
+    .stats { display: flex; gap: 40px; justify-content: center; flex-wrap: wrap; margin-bottom: 32px; }
+    .stat { text-align: center; }
+    .stat-value { font-size: 36px; font-weight: 700; font-variant-numeric: tabular-nums; font-family: 'Geist Mono', monospace; }
+    .stat-label { font-size: 14px; color: #737373; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 4px; }
+    .pills { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .pill { background: #181818; border: 1px solid #2a2a2a; padding: 8px 16px; border-radius: 9999px; font-size: 14px; color: #a3a3a3; }
+    .pill.primary { background: #1e3a5f; border-color: #60a5fa; color: #60a5fa; }
+    @media (prefers-color-scheme: light) {
+      body { background: #fafafa; color: #171717; }
+      .bg-pattern { background-image: radial-gradient(circle at 20% 20%, rgba(0, 102, 204, 0.08) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(5, 150, 105, 0.08) 0%, transparent 50%); }
+      p { color: #737373; }
+      .stat-label { color: #737373; }
+      .pill { background: #ffffff; border-color: #e5e5e5; color: #737373; }
+      .pill.primary { background: #eff6ff; border-color: #0066cc; color: #0066cc; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-pattern"></div>
+  <div class="content">
+    <h1>I turn LLM prototypes that work in notebooks into features that work in production — <span class="highlight">evals, observability, and all.</span></h1>
+    <p>AI Engineer • LLM/RAG/Agents • Production Systems</p>
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-value">3+</div>
+        <div class="stat-label">Shipped Systems</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">18% → 3%</div>
+        <div class="stat-label">Hallucinations</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">50%+</div>
+        <div class="stat-label">Latency Reduction</div>
+      </div>
+    </div>
+    <div class="pills">
+      <span class="pill primary">LangChain</span>
+      <span class="pill">LlamaIndex</span>
+      <span class="pill">RAGAS</span>
+      <span class="pill">Langfuse</span>
+      <span class="pill">vLLM</span>
+      <span class="pill">Kubernetes</span>
+    </div>
+  </div>
+</body>
+</html>
