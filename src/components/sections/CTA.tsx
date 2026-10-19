@@ -23,7 +23,7 @@ export function CTA() {
     >
       <div className="max-w-6xl mx-auto text-center">
         <div className="section-header-immersive reveal-section">
-          <span className="section-badge">05 — Contact</span>
+          <span className="section-badge">06 — Contact</span>
           <h2 id="contact-heading">Ready to Ship Reliable LLM Features?</h2>
           <p>
             I&rsquo;m currently open to <strong>full-time AI Engineer roles</strong> (founding engineer / senior IC) at AI-first startups.

@@ -10,6 +10,7 @@ const navItems = [
   { href: '#problem', label: 'The Problem' },
   { href: '#work', label: 'Work' },
   { href: '#process', label: 'Process' },
+  { href: '#research', label: 'Research' },
   { href: '#proof', label: 'Proof' },
 ]
 
