@@ -37,7 +37,7 @@ export function Footer() {
             Contact
           </a>
           <a
-            href="https://linkedin.com/in/manunyi"
+            href="https://www.linkedin.com/in/manunyi-godfrey-a0433012a/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-primary transition-colors flex items-center gap-1.5"

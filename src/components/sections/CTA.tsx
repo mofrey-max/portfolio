@@ -54,8 +54,8 @@ export function CTA() {
           <ContactLink
             icon={<Linkedin className="w-5 h-5" />}
             label="LinkedIn"
-            value="linkedin.com/in/manunyi"
-            href="https://linkedin.com/in/manunyi"
+            value="linkedin.com/in/manunyi-godfrey"
+            href="https://www.linkedin.com/in/manunyi-godfrey-a0433012a/"
             external
           />
           <ContactLink
